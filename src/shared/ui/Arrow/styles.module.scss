@@ -1,0 +1,12 @@
+@import "../../styles/mixin.scss";
+
+.root {
+  padding: 10.5px 15px;
+  background: var(--clean-gray);
+  border: 1px solid transparent;
+  @include gradient-border();
+}
+
+.right {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}

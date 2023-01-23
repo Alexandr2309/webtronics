@@ -1,0 +1,23 @@
+.root {
+  margin-top: 118px;
+}
+
+.title {
+  &_main {
+    display: block;
+    text-indent: 9px;
+    color: var(--clean-white);
+    margin-bottom: -26px;
+  }
+}
+
+.course {
+  font: var(--font-x);
+  text-indent: calc(1220px - 179px);
+  color: var(--clean-white);
+}
+
+.subtitle {
+  text-indent: 310px;
+  color: var(--clean-white);
+}

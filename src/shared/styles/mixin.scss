@@ -1,0 +1,7 @@
+@mixin gradient-border($color: --gradient-common) {
+  border: 1px solid transparent;
+  border-image: var($color);
+  -moz-border-image: var($color);
+  -webkit-border-image: var($color);
+  border-image-slice: 1;
+}

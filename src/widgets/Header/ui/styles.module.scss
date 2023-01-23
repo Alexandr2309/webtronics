@@ -1,0 +1,26 @@
+.root {
+  padding: 40px 0 0 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 48px;
+}
+
+.item {
+  font: var(--font-m);
+  color: var(--clean-white);
+  font-weight: 400;
+}
+
+.icon {
+  max-width: 169px;
+}

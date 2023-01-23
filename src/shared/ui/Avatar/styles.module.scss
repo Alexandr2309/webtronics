@@ -1,0 +1,11 @@
+.root {
+  width: 184px;
+  height: 184px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  border-image: var(--gradient-common);
+  -moz-border-image: var(--gradient-common);
+  -webkit-border-image: var(--gradient-common);
+  border-image-slice: 1;
+  background: #D9D9D9;
+}

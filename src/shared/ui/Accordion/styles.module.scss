@@ -1,0 +1,35 @@
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordion {
+  color: var(--clean-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  outline: none;
+  background: none;
+  border: none;
+  transition: background-color 0.4s ease;
+}
+
+.accordion__title {
+  font: var(--font-l);
+}
+
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.4s ease;
+}
+
+.accordion__content {
+  overflow: auto;
+  transition: max-height 0.4s ease;
+  color: var(--clean-white);
+}
+
+.accordion__text {
+  font: var(--font-m);
+}
