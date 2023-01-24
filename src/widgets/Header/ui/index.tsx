@@ -6,6 +6,7 @@ import { HeaderNavigations } from './navigations';
 import { Container } from '@/app/providers/Layout';
 import WorkerImg from '@/widgets/Header/ui/header_worker.png';
 import Image from 'next/image';
+import { SubHeader } from '@/pages/home/sections/sub-header';
 
 export interface HeaderProps {
   className?: string;
@@ -22,7 +23,7 @@ const BackgroundWorker = () => (
       objectFit: 'cover',
     }}
   >
-    <Image src={WorkerImg} alt='worker' fill/>
+    <Image src={WorkerImg} alt='worker' fill />
   </div>
 );
 
@@ -34,6 +35,9 @@ export const Header = memo((props: HeaderProps) => {
       <Container className={cls.container}>
         <LogoIcon className={cls.icon} />
         <HeaderNavigations />
+      </Container>
+      <Container className={cls.container}>
+        <SubHeader />
       </Container>
     </header>
   );

@@ -28,6 +28,16 @@
   }
 }
 
+.white {
+  .title {
+    color: var(--clean-white);
+  }
+
+  .text {
+    color: var(--clean-white);
+  }
+}
+
 .left {
   text-align: left;
 }

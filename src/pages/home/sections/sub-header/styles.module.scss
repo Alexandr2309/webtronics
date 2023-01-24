@@ -1,13 +1,14 @@
 .root {
   margin-top: 118px;
+  position: relative;
 }
 
 .title {
   &_main {
-    display: block;
-    text-indent: 9px;
+    //text-indent: 9px;
     color: var(--clean-white);
     margin-bottom: -26px;
+    position: relative;
   }
 }
 
@@ -20,4 +21,21 @@
 .subtitle {
   text-indent: 310px;
   color: var(--clean-white);
+  position: relative;
+}
+
+.text {
+  max-width: 360px;
+  position: absolute;
+  bottom: 57px;
+  right: 0;
+  & > p {
+    font: var(--font-m) !important;
+  }
+}
+.btn {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
 }
