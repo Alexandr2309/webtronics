@@ -1,9 +1,9 @@
-import cls from './styles.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, MutableRefObject, useRef, useState } from 'react';
-import OpenIcon from '@/shared/assets/icons/open.svg';
 import CloseIcon from '@/shared/assets/icons/close.svg';
+import OpenIcon from '@/shared/assets/icons/open.svg';
+import { classNames } from '@/shared/lib/classNames';
 import { Card } from '@/shared/ui/Card';
+import cls from './styles.module.scss';
 
 export interface AccordionProps {
   className?: string;

@@ -1,6 +1,6 @@
-import cls from './styles.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames';
 import { TextSize, Text } from '@/shared/ui/Text';
+import cls from './styles.module.scss';
 
 export interface AboutProps {
   className?: string;

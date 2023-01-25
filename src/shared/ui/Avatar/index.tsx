@@ -2,11 +2,11 @@
  * Created by Саня on 01.11.2022
  */
 import { CSSProperties, useMemo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './styles.module.scss';
+import { classNames } from '@/shared/lib/classNames';
 import { AppImage } from '../AppImage';
 import { Skeleton } from '../Skeleton';
 import UserIcon from './avatar.svg';
+import cls from './styles.module.scss';
 
 interface IAvatarProps {
   className?: string;

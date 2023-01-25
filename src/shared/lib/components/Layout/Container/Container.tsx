@@ -1,5 +1,5 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import React from 'react';
+import { classNames } from '@/shared/lib/classNames';
 import cls from './Container.module.scss';
 
 export interface ContainerProps {

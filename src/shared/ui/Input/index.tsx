@@ -1,6 +1,6 @@
-import cls from './styles.module.scss';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { ChangeEvent, InputHTMLAttributes, memo, useCallback } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames';
+import cls from './styles.module.scss';
 
 type InputTheme = 'default' | 'error' | 'disabled';
 

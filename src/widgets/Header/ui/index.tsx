@@ -1,12 +1,12 @@
-import cls from './styles.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { memo } from 'react';
-import LogoIcon from '@/shared/assets/icons/logo.svg';
-import { HeaderNavigations } from './navigations';
-import { Container } from '@/app/providers/Layout';
-import WorkerImg from '@/widgets/Header/ui/header_worker.png';
 import Image from 'next/image';
+import { memo } from 'react';
 import { SubHeader } from '@/pages/home/sections/sub-header';
+import WorkerImg from '@/widgets/Header/ui/header_worker.png';
+import LogoIcon from '@/shared/assets/icons/logo.svg';
+import { classNames } from '@/shared/lib/classNames';
+import { Container } from '@/shared/lib/components/Layout';
+import { HeaderNavigations } from './navigations';
+import cls from './styles.module.scss';
 
 export interface HeaderProps {
   className?: string;

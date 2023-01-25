@@ -1,7 +1,7 @@
 /**
  * Created by Саня on 29.09.2022
  */
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames';
 import { Button } from '@/shared/ui/Button';
 import cls from './PageError.module.scss';
 

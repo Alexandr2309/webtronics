@@ -1,8 +1,8 @@
-import cls from './styles.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { Text, TextSize, TextTheme } from '@/shared/ui/Text';
+import { classNames } from '@/shared/lib/classNames';
 import { Button } from '@/shared/ui/Button';
+import { Text, TextSize, TextTheme } from '@/shared/ui/Text';
+import cls from './styles.module.scss';
 
 export interface SubHeaderProps {
   className?: string;

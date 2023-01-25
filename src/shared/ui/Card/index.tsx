@@ -1,6 +1,6 @@
-import cls from './styles.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { HTMLAttributes, memo } from 'react';
+import { classNames } from '@/shared/lib/classNames';
+import cls from './styles.module.scss';
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;

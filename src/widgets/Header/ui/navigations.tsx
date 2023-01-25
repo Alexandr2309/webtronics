@@ -1,8 +1,8 @@
-import cls from './styles.module.scss';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { headerItems } from '../model';
 import Link from 'next/link';
 import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames';
+import { headerItems } from '../model';
+import cls from './styles.module.scss';
 
 export interface navigationsProps {
   className?: string;

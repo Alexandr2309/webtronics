@@ -1,8 +1,8 @@
-import cls from './styles.module.scss'
-import { classNames } from '@/shared/lib/classNames/classNames'
 import { memo } from 'react';
-import { Button } from "../Button";
 import ArrowIcon from '@/shared/assets/icons/arrow_left.svg';
+import { classNames } from '@/shared/lib/classNames'
+import { Button } from "../Button";
+import cls from './styles.module.scss'
 
 type ArrowDirection = 'left' | 'right';
 
