@@ -12,11 +12,12 @@ export const Address = memo((props: AddressProps) => {
   const { className } = props;
   return (
     <div className={classNames(cls.address, {}, [className])}>
-      <LogoIcon />
+      <LogoIcon className={cls.logo} />
       <Text
         size={TextSize.M}
         text='Wisconsin Ave, Suite 700
 Chevy Chase, Maryland 20815'
+        className={cls.text}
       />
     </div>
   );

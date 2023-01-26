@@ -1,11 +1,11 @@
-import { HeaderLink } from '@/widgets/Header/model/types';
 import {
   getRouteAbout,
   getRoutePrograms,
   getRouteQuestions,
   getRouteSteps,
   getRouteGetInTouch,
-} from '@/shared/const/route';
+} from '@/shared/lib/const';
+import { HeaderLink } from './types';
 
 export const headerItems: HeaderLink[] = [
   {

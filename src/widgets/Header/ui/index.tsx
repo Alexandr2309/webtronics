@@ -1,15 +1,16 @@
 import Image from 'next/image';
-import { memo } from 'react';
-import { SubHeader } from '@/pages/home/sections/sub-header';
-import WorkerImg from '@/widgets/Header/ui/header_worker.png';
+import { memo, ReactNode } from 'react';
+import { SubHeader } from './sub-header';
 import LogoIcon from '@/shared/assets/icons/logo.svg';
 import { classNames } from '@/shared/lib/classNames';
-import { Container } from '@/shared/lib/components/Layout';
+import { Container } from '@/shared/lib/components';
+import WorkerImg from './header_worker.png';
 import { HeaderNavigations } from './navigations';
 import cls from './styles.module.scss';
 
 export interface HeaderProps {
   className?: string;
+  subHeader?: boolean;
 }
 
 const BackgroundWorker = () => (
@@ -28,7 +29,7 @@ const BackgroundWorker = () => (
 );
 
 export const Header = memo((props: HeaderProps) => {
-  const { className } = props;
+  const { className, subHeader } = props;
   return (
     <header className={classNames(cls.root, {}, [className])}>
       <BackgroundWorker />
@@ -36,9 +37,11 @@ export const Header = memo((props: HeaderProps) => {
         <LogoIcon className={cls.icon} />
         <HeaderNavigations />
       </Container>
-      <Container className={cls.container}>
-        <SubHeader />
-      </Container>
+      {subHeader && (
+        <Container className={cls.container}>
+          <SubHeader />
+        </Container>
+      )}
     </header>
   );
 });

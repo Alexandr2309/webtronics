@@ -1,13 +1,18 @@
 import { ReactNode } from 'react';
-import { Header } from '@/widgets/Header';
 import { Footer } from '@/widgets/Footer';
+import { Header } from '@/widgets/Header';
 
-export { Container } from './Container/Container';
+export { Container } from './Container';
 
-export const Layout = ({ children }: { children: ReactNode }) => {
+interface LayoutProps {
+  children: ReactNode;
+  subHeader?: boolean;
+}
+
+export const Layout = ({ children, subHeader = false }: LayoutProps) => {
   return (
     <>
-      <Header />
+      <Header subHeader={subHeader} />
       <main>{children}</main>
       <Footer />
     </>

@@ -1,5 +1,5 @@
 import { ChangeEvent, RefObject } from 'react';
-import { PHONE_REGEXP } from "@/shared/const/reg-exp";
+import { PHONE_REGEXP } from '@/shared/lib/const';
 
 const onBlurCheckFormat = (e: ChangeEvent<HTMLInputElement>) => {
   const value = e.target?.value || '';

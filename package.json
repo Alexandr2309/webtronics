@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "server": "json-server --watch db.json -p 3004",
     "lint": "next lint",
-    "server": "json-server --watch db.json -p 3004"
+    "lint:ts": "eslint \"**/*.{ts,tsx}\" --quiet",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix"
   },
   "dependencies": {
     "@next/font": "13.1.1",
