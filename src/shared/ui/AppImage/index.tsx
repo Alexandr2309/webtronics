@@ -1,23 +1,29 @@
-import {
-  ImgHTMLAttributes, memo, ReactElement, useLayoutEffect, useState,
-} from 'react';
+import NextImage from 'next/image';
+import { memo, ReactElement, useLayoutEffect, useState } from 'react';
 
-export interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement>{
+type ImageNext = typeof import('next/image');
+
+interface CustomProps {
   className?: string;
   fallback?: ReactElement;
-  errorFallback?: ReactElement
+  errorFallback?: ReactElement;
 }
 
+// @ts-ignore
+export type AppImageProps = ImageNext['ImageProps'] & CustomProps;
+
 export const AppImage = memo((props: AppImageProps) => {
-  const {
-    className, src, alt = 'image', fallback, errorFallback, ...otherProps
-  } = props;
+  const { className, src, alt, fallback, errorFallback, ...otherProps } = props;
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
   useLayoutEffect(() => {
     const img = new Image();
-    img.src = src ?? '';
+    if (typeof src === 'object') {
+      img.src = src?.src ?? '';
+    } else {
+      img.src = src ?? '';
+    }
 
     img.onload = () => {
       setIsLoading(false);
@@ -38,6 +44,6 @@ export const AppImage = memo((props: AppImageProps) => {
   }
 
   return (
-    <img className={className} src={src} alt={alt} {...otherProps} />
+    <NextImage className={className} src={src} alt={alt} {...otherProps} />
   );
 });

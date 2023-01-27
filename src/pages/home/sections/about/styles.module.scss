@@ -1,3 +1,106 @@
 .root {
+  position: relative;
+}
 
+.title > *,
+.name > *,
+.block_title > *,
+.block_txt > p {
+  color: var(--clean-white);
+}
+
+.title {
+  margin-bottom: 56px;
+}
+
+.blur {
+  top: 68px;
+}
+
+.content {
+  display: flex;
+}
+
+.block_title {
+  margin-bottom: 11.5px;
+}
+
+.block_mentor,
+.block_txt {
+  flex: 0 1 50%;
+}
+
+.block_txt {
+  align-self: flex-end;
+  max-width: 486px;
+}
+
+.rotate_line {
+  -moz-transform: scale(-1, 1) translateX(3px);
+  -o-transform: scale(-1, 1) translateX(3px);
+  -webkit-transform: scale(-1, 1) translateX(3px);
+  transform: scale(-1, 1) translateX(3px);
+  position: relative;
+  z-index: -1;
+}
+
+.straight_line {
+  position: relative;
+  z-index: 2;
+}
+
+.curved_line {
+  -moz-transform: translateX(3px);
+  -o-transform: translateX(3px);
+  -webkit-transform: translateX(3px);
+  transform: translateX(3px);
+  position: relative;
+  z-index: -1;
+}
+
+.mentor_wrap {
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.item {
+  position: absolute;
+  top: 98%;
+}
+
+/* STYLES FOR ITEMS AVATAR */
+.item_left {
+  right: 60%;
+}
+.item_center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.item_right {
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+/* STYLES FOR IMG IN AVATAR MENTORS*/
+.img_left {
+  object-position: 5% 0;
+}
+.img_center {
+  object-position: 0 25%;
+}
+.img_right {
+  scale: 1.2;
+  object-position: 5% -20%;
+}
+
+.front {
+  position: absolute;
+  right: 85px;
+  bottom: 0;
+  transform: translateY(calc(100% + 82px));
 }

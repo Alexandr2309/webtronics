@@ -1,12 +1,14 @@
 .root {
-
 }
 
 .logo {
   max-width: 169px;
 }
 
-.text > p{
-  color: var(--clean-white);
+.text {
+  max-width: 231px;
   margin-top: 24px;
+  & > p {
+    color: var(--clean-white);
+  }
 }

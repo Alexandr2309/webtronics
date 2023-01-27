@@ -1,4 +1,3 @@
-import { HeaderLink } from '@/widgets/Header/model/types';
 import {
   getRouteAbout,
   getRouteReview,
@@ -7,10 +6,15 @@ import {
 } from '@/shared/lib/const';
 import { getRouteGallery } from '@/shared/lib/const';
 
-export const footerItems: HeaderLink[] = [
+interface FooterLink {
+  path: string;
+  text: string;
+}
+
+export const footerItems: FooterLink[] = [
   {
     path: getRouteAbout(),
-    text: 'About as',
+    text: 'About Us',
   },
   {
     path: getRouteSteps(),

@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { memo, ReactNode } from 'react';
-import { SubHeader } from './sub-header';
-import LogoIcon from '@/shared/assets/icons/logo.svg';
+import { LogoIcon } from '@/shared/assets/icons';
 import { classNames } from '@/shared/lib/classNames';
 import { Container } from '@/shared/lib/components';
+import { Blur } from '@/shared/ui/Blur';
 import WorkerImg from './header_worker.png';
 import { HeaderNavigations } from './navigations';
 import cls from './styles.module.scss';
+import { SubHeader } from './sub-header';
 
 export interface HeaderProps {
   className?: string;
@@ -42,6 +43,7 @@ export const Header = memo((props: HeaderProps) => {
           <SubHeader />
         </Container>
       )}
+      <Blur />
     </header>
   );
 });

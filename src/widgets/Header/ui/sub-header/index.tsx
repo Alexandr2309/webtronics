@@ -4,6 +4,11 @@ import { Button } from '@/shared/ui/Button';
 import { Text, TextSize, TextTheme } from '@/shared/ui/Text';
 import cls from './styles.module.scss';
 
+const enum SubHeaderInfo {
+  MAIN_TXT = 'Make UIs and websites beautiful, functional, and fast. Cover all the topics that expensive bootcamps teach (and more).',
+  BTN_TXT = 'Start my career change',
+}
+
 export interface SubHeaderProps {
   className?: string;
 }
@@ -14,16 +19,16 @@ export const SubHeader = memo((props: SubHeaderProps) => {
   const Title = (
     <>
       <div className={cls.title_main}>
-        Frontend{' '}
+        Front-End{' '}
         <Text
           className={cls.text}
           size={TextSize.M}
           theme={TextTheme.WHITE}
-          text='Make UIs and websites beautiful, functional, and fast. Cover all the topics that expensive bootcamps teach (and more).'
+          text={SubHeaderInfo.MAIN_TXT}
         />
       </div>
       <div className={cls.subtitle}>
-        <Button className={cls.btn}>Start my career change</Button>Developer
+        <Button className={cls.btn}>{SubHeaderInfo.BTN_TXT}</Button>Developer
       </div>
       <p className={cls.course}>Courses</p>
     </>

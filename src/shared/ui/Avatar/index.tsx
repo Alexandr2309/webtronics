@@ -1,7 +1,10 @@
 /**
  * Created by Саня on 01.11.2022
  */
+import NImage from 'next/image';
 import { CSSProperties, useMemo } from 'react';
+import Ellipse from '@/shared/assets/images/ellipse.png';
+import { StaticImport } from '@/shared/config';
 import { classNames } from '@/shared/lib/classNames';
 import { AppImage } from '../AppImage';
 import { Skeleton } from '../Skeleton';
@@ -10,7 +13,7 @@ import cls from './styles.module.scss';
 
 interface IAvatarProps {
   className?: string;
-  src?: string;
+  src: string | StaticImport;
   alt?: string;
   size?: number;
 }
@@ -30,13 +33,16 @@ export const Avatar = (props: IAvatarProps) => {
   );
 
   return (
-    <AppImage
-      fallback={fallback}
-      errorFallback={errorFallback}
-      alt={alt}
-      src={src}
-      className={classNames(cls.root, {}, [className])}
-      style={styles}
-    />
+    <div className={cls.wrapper} style={styles}>
+      <NImage fill className={cls.elipse} src={Ellipse} alt='elipse' />
+      <AppImage
+        fallback={fallback}
+        errorFallback={errorFallback}
+        alt={alt}
+        src={src}
+        // style={styles}
+        className={classNames(cls.root, {}, [className])}
+      />
+    </div>
   );
 };

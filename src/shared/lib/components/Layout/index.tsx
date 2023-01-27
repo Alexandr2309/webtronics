@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
+// eslint-disable-next-line boundaries/element-types
 import { Footer } from '@/widgets/Footer';
+// eslint-disable-next-line boundaries/element-types
 import { Header } from '@/widgets/Header';
 
 export { Container } from './Container';
@@ -13,7 +15,7 @@ export const Layout = ({ children, subHeader = false }: LayoutProps) => {
   return (
     <>
       <Header subHeader={subHeader} />
-      <main>{children}</main>
+      <main className='App'>{children}</main>
       <Footer />
     </>
   );
