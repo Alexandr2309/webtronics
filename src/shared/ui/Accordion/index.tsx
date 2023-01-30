@@ -1,54 +1,56 @@
-import { memo, MutableRefObject, useRef, useState } from 'react';
+import Image from 'next/image';
+import { memo, useState } from 'react';
 import CloseIcon from '@/shared/assets/icons/close.svg';
 import OpenIcon from '@/shared/assets/icons/open.svg';
 import { classNames } from '@/shared/lib/classNames';
-import { Card } from '@/shared/ui/Card';
+import { Text, TextSize } from '../Text';
+import GradientBorder from './border.png';
 import cls from './styles.module.scss';
 
-export interface AccordionProps {
-  className?: string;
-  content: string;
+export interface FAQ {
   title: string;
+  answer: string;
 }
 
-export const Accordion = memo((props: AccordionProps) => {
-  const { className, content: children, title } = props;
+export interface AccordionProps<T extends FAQ> {
+  className?: string;
+  data: Array<T | FAQ>;
+}
 
-  const [active, setActive] = useState('');
-  const [height, setHeight] = useState('0px');
-
-  const content = useRef() as MutableRefObject<HTMLDivElement>;
-
-  function toggleAccordion() {
-    setActive(active === '' ? 'active' : '');
-    setHeight(
-      active === 'active' ? '0px' : `${content.current.scrollHeight}px`
-    );
-  }
+const AccordionComponent = <T extends FAQ>(props: AccordionProps<T>) => {
+  const { className, data } = props;
+  const [selected, setSelected] = useState<null | number>(null);
+  const toggleAccordion = (i: number) => {
+    if (i === selected) {
+      return setSelected(null);
+    }
+    setSelected(i);
+  };
 
   return (
-    <Card className={classNames(cls.accordion__section, {}, [className])}>
-      <button
-        className={classNames(cls.accordion, { [cls.active]: active }, [])}
-        onClick={toggleAccordion}
-      >
-        <p className={cls.accordion__title}>{title}</p>
-        {active === 'active' ? (
-          <OpenIcon className={cls.accordion__icon} />
-        ) : (
-          <CloseIcon className={cls.accordion__icon} />
-        )}
-      </button>
-      <div
-        ref={content}
-        style={{ maxHeight: `${height}` }}
-        className={cls.accordion__content}
-      >
-        <div
-          className={cls.accordion__text}
-          dangerouslySetInnerHTML={{ __html: children }}
-        />
+    <div className={classNames(cls.root, {}, [className])}>
+      <div className={cls.accordion}>
+        {data.map((item, i) => (
+          <div className={cls.item} key={i}>
+            <Image src={GradientBorder} alt='background' className={cls.bg} />
+            <div className={cls.title} onClick={() => toggleAccordion(i)}>
+              <Text size={TextSize.M} title={item.title} />
+              {selected === i ? <OpenIcon /> : <CloseIcon />}
+            </div>
+            <div
+              className={classNames(
+                cls.content,
+                { [cls.show]: selected === i },
+                []
+              )}
+            >
+              {item.answer}
+            </div>
+          </div>
+        ))}
       </div>
-    </Card>
+    </div>
   );
-});
+};
+
+export const Accordion = memo(AccordionComponent) as typeof AccordionComponent;

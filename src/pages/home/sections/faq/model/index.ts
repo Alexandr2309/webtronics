@@ -1,0 +1,1 @@
+export { faqArr } from './questions';

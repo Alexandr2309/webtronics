@@ -4,6 +4,8 @@
 }
 
 .title {
+  position: relative;
+  z-index: 9999;
   &_main {
     color: var(--clean-white);
     margin-bottom: -26px;
@@ -12,6 +14,8 @@
 }
 
 .course {
+  position: relative;
+  z-index: 9999;
   font: var(--font-x);
   text-indent: calc(1220px - 179px);
   color: var(--clean-white);

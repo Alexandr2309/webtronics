@@ -1,6 +1,12 @@
 import Head from 'next/head';
+import { Gallery } from '@/pages/home/sections/gallery';
+import { Review } from '@/pages/home/sections/review';
 import { Layout } from '@/shared/lib/components';
 import { About } from './sections/about';
+import { ContactUs } from './sections/contact';
+import { FAQ } from './sections/faq';
+import { Steps } from './sections/steps';
+import { Technologies } from './sections/technologies';
 
 export default function Home() {
   return (
@@ -12,6 +18,12 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <About />
+      <Technologies />
+      <Steps />
+      <FAQ />
+      <Review />
+      <Gallery />
+      <ContactUs />
     </Layout>
   );
 }

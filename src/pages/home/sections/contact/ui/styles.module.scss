@@ -1,0 +1,31 @@
+.root {
+  position: relative;
+  margin-bottom: 148px;
+}
+
+.wrapper {
+  background: linear-gradient(#191d39 0 0) padding-box,
+    linear-gradient(
+        to right,
+        rgba(21, 191, 253, 0.7) 9.96%,
+        rgba(156, 55, 253, 0.7) 100%
+      )
+      border-box;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 56px 0;
+  text-align: center;
+  display: flex;
+
+}
+
+.content_wrapper {
+  max-width: 630px;
+  flex: 1 0 auto;
+  margin: 0px auto;
+}
+
+.text {
+  font: var(--font-m);
+  color: var(--clean-white);
+}

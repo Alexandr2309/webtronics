@@ -45,7 +45,7 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
 export const Text = memo((props: TextProps) => {
   const {
     className,
-    theme = TextTheme.PRIMARY,
+    theme = TextTheme.WHITE,
     text,
     title,
     align = TextAlign.LEFT,

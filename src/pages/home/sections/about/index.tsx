@@ -16,6 +16,7 @@ export const About = memo(({ className }: AboutProps) => {
   return (
     <section className={classNames(cls.root, {}, [className])} id='about'>
       <Blur position='top' className={cls.blur} />
+      <Blur position='bottom' />
       <Container>
         <Text
           title='About Us'

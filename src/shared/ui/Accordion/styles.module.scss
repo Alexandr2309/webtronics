@@ -1,35 +1,94 @@
-.accordion__section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+@import '@/shared/styles/mixin.scss';
+
+.root {
+  width: 100%;
+  height: 100%;
 }
 
 .accordion {
-  color: var(--clean-white);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 23;
+  padding: 16.6px 20px 16.6px 24px;
+
+  //margin: 0px auto;
+  //background: var(--clean-gray);
+  //border-image: var(--gradient-common) 1;
+  //border-width: 1px;
+  //border-style: solid;
+  //border-radius: 8px;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+//.item:before {
+//  border-image: none;
+//  border-width: 0 1px 0 0;
+//  border-style: solid;
+//  width: 51px;
+//  height: 30px;
+//  content: '';
+//  position: absolute;
+//  transform: rotate(50deg);
+//  left: -31px;
+//  top: -26px;
+//  background: var(--bg-color);
+//}
+//
+//.item:after {
+//  border-image: none;
+//  border-width: 0 0 0 1px;
+//  border-style: solid;
+//  width: 50px;
+//  height: 30px;
+//  content: '';
+//  position: absolute;
+//  transform: rotate(50deg);
+//  right: -31px;
+//  bottom: -25px;
+//  background: var(--bg-color);
+//}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
+  position: relative;
+  z-index: 23;
+  //padding: 0 0 16.6px 0;
+}
+
+.content {
+  color: var(--clean-white);
+  font: var(--font-m);
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.2s linear;
+  padding: 0 73px 0 0;
   display: flex;
   align-items: center;
-  outline: none;
-  background: none;
-  border: none;
-  transition: background-color 0.4s ease;
-}
 
-.accordion__title {
-  font: var(--font-l);
-}
-
-.accordion__icon {
-  margin-left: auto;
-  transition: transform 0.4s ease;
-}
-
-.accordion__content {
-  overflow: auto;
-  transition: max-height 0.4s ease;
-  color: var(--clean-white);
-}
-
-.accordion__text {
-  font: var(--font-m);
+  &.show {
+    visibility: visible;
+    height: calc(66px + 22px + 16px);
+    max-height: 9999px;
+    transition: all 0.2s linear;
+  }
 }

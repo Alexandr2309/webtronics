@@ -1,0 +1,40 @@
+.root {
+  position: relative;
+  margin-bottom: 180px;
+}
+
+.title {
+  margin-bottom: 56px;
+}
+
+.content {
+  //pos:r
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.mark {
+  flex: 1 1 496px;
+  position: relative;
+  //display: flex;
+  //flex-direction: column;
+  text-align: center;
+}
+
+
+.questions {
+}
+
+.accordion {
+  flex: 1 1 703px;
+}
+
+.text_mark {
+  margin-bottom: 56px;
+}
+.question_mark {
+  filter: drop-shadow(0 0px 15px #6b55d8) drop-shadow(0 0 25px #6b55d8);
+  max-width: 344px;
+  max-height: 405px;
+}

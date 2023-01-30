@@ -1,31 +1,50 @@
-.root {
+@import '@/shared/styles/mixin.scss';
 
+.root {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
 }
 
 .input {
-  border-radius: 8px;
+  box-sizing: border-box;
   width: 100%;
+  background: linear-gradient(#252943 0 0) padding-box,
+    linear-gradient(
+        to right,
+        rgba(21, 191, 253, 0.7) 9.96%,
+        rgba(156, 55, 253, 0.7) 100%
+      )
+      border-box;
   border: 1px solid transparent;
-  border-image: var(--gradient-common);
-  -moz-border-image: var(--gradient-common);
-  -webkit-border-image: var(--gradient-common);
-  border-image-slice: 1;
-  color: var(--text-common-color);
+  border-radius: 8px;
+  color: var(--clean-white);
   font: var(--font-m);
   padding: 24px;
   &:active {
     color: var(--clean-white);
   }
+  &:focus-visible {
+    outline: none;
+  }
+  &::placeholder {
+    color: var(--text-common-color);
+  }
 }
 
 .error {
+  &::placeholder {
+    color: var(--clean-white);
+  }
   color: var(--clean-white);
   background: rgba(255, 165, 165, 0.2);
   border: 1px solid var(--error-color);
 }
 
 .disabled {
-  background: var(--clean-gray);
+  &::placeholder {
+    color: var(--clean-gray);
+  }
   border: 1px solid var(--border-color);
   color: var(--border-color);
 }

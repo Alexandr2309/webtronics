@@ -1,0 +1,52 @@
+.root {
+  position: relative;
+  padding-bottom: 180px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.text {
+  margin: 50px 0 80px;
+}
+
+.block {
+  position: relative;
+}
+
+.img {
+  border-radius: 16px;
+  &_first {
+    max-width: 284px;
+    max-height: 434px;
+    object-fit: cover;
+  }
+  &_second {
+    max-width: 650px;
+    object-fit: cover;
+    max-height: 434px;
+  }
+  &_third {
+    object-fit: cover;
+    max-width: 288px;
+    max-height: 209px;
+    margin-bottom: 20px;
+  }
+  &_four {
+    object-fit: cover;
+    max-width: 288px;
+    max-height: 201px;
+  }
+}
+
+.small_imgs {
+}
+
+.second_text {
+  position: absolute;
+  bottom: 0;
+  left: calc(24px + 100%);
+  width: 850px;
+}

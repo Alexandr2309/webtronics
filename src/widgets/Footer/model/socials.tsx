@@ -1,8 +1,8 @@
+import React from 'react';
 import FbIcon from '@/shared/assets/icons/socials/fb.svg';
 import GitlabIcon from '@/shared/assets/icons/socials/gitlab.svg';
 import LinkedInIcon from '@/shared/assets/icons/socials/linkedin.svg';
 import TwitterIcon from '@/shared/assets/icons/socials/twitter.svg';
-import React from 'react';
 
 type SocialsIcons = {
   href: string;

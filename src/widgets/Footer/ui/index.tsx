@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames';
-import { Address } from './address';
-import cls from './styles.module.scss';
 import { Container } from '@/shared/lib/components';
+import { Address } from './address';
 import { Company } from './company';
 import { Socials } from './socials';
+import cls from './styles.module.scss';
 
 export interface FooterProps {
   className?: string;

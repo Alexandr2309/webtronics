@@ -8,6 +8,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 
 export const Card = memo((props: CardProps) => {
   const { className, children } = props;
+
   return (
     <article className={classNames(cls.root, {}, [className])}>
       {children}
