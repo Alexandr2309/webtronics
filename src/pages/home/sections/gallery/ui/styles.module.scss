@@ -1,6 +1,11 @@
 .root {
   position: relative;
   padding-bottom: 180px;
+  z-index: 9999;
+}
+
+.title {
+  margin-bottom: 48px;
 }
 
 .wrapper {

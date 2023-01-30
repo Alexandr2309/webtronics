@@ -32,7 +32,7 @@ const AccordionComponent = <T extends FAQ>(props: AccordionProps<T>) => {
       <div className={cls.accordion}>
         {data.map((item, i) => (
           <div className={cls.item} key={i}>
-            <Image src={GradientBorder} alt='background' className={cls.bg} />
+            {/*<Image src={GradientBorder} alt='background' className={cls.bg} />*/}
             <div className={cls.title} onClick={() => toggleAccordion(i)}>
               <Text size={TextSize.M} title={item.title} />
               {selected === i ? <OpenIcon /> : <CloseIcon />}
